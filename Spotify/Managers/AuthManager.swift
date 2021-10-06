@@ -6,13 +6,7 @@
 //
 
 import Foundation
-struct Constant {
-    static let clientID = "f6b88cdd24af4acd956cc5a55b262c44"
-    static let clientSecret = "ec547b62df9f4fb78c5d8d134568dcfe"
-    static let tokenApiURL = "https://accounts.spotify.com/api/token"
-    static let redirectURI = "https://roadway.app"
-    static  let scopes = "user-read-private%20playlist-modify-public%20playlist-read-private%20playlist-modify-private%20user-follow-read%20user-library-modify%20user-library-read%20user-read-email"
-}
+
 final class AuthManager{
     
     static let shared = AuthManager()
@@ -91,14 +85,7 @@ final class AuthManager{
         dataTask.resume()
         
     }
-    private func cacheToken(result:AuthResponce){
-        UserDefaults.standard.set(result.access_token, forKey: "access_token")
-        if let refresh_token = result.refresh_token {
-            UserDefaults.standard.set(refresh_token, forKey: "refresh_token")
-        }
 
-        UserDefaults.standard.set(Date().addingTimeInterval(TimeInterval(result.expires_in)), forKey: "expirationDate")
-    }
     private var onRefreshBlocks = [((String)-> Void)]()
     
     /// Supplies valid Token to be used with Api calls
@@ -177,5 +164,23 @@ final class AuthManager{
         dataTask.resume()
         
         
+    }
+    private func cacheToken(result:AuthResponce){
+        UserDefaults.standard.setValue(result.access_token,
+                                       forKey: "access_token")
+        if let refresh_token = result.refresh_token {
+            UserDefaults.standard.setValue(refresh_token,
+                                           forKey: "refresh_token")
+        }
+
+        UserDefaults.standard.setValue(Date().addingTimeInterval(TimeInterval(result.expires_in)),
+                                       forKey: "expirationDate")
+    }
+    
+    public func signOut(completion:(Bool)->Void){
+        UserDefaults.standard.setValue(nil,  forKey: "access_token")
+        UserDefaults.standard.setValue(nil, forKey: "refresh_token")
+        UserDefaults.standard.setValue(nil, forKey: "expirationDate")
+        completion(true)
     }
 }
