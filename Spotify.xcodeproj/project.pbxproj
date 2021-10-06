@@ -69,6 +69,7 @@
 		2BCAE11F26FB307A008110D7 /* PlayBackPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCAE11E26FB307A008110D7 /* PlayBackPresenter.swift */; };
 		2BCAE12126FB45A3008110D7 /* PlayerControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCAE12026FB45A3008110D7 /* PlayerControllerView.swift */; };
 		2BCAE12326FB5B3B008110D7 /* PlayerControllerViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCAE12226FB5B3B008110D7 /* PlayerControllerViewViewModel.swift */; };
+		2BE5D58F2708B951008807E3 /* CarPlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BE5D58E2708B951008807E3 /* CarPlay.framework */; };
 		CEE78C9790FC5F82BD0BEC87 /* Pods_Spotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB5BDBD6A746FC75BC4D6C0 /* Pods_Spotify.framework */; };
 /* End PBXBuildFile section */
 
@@ -137,6 +138,7 @@
 		2BCAE11E26FB307A008110D7 /* PlayBackPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayBackPresenter.swift; sourceTree = "<group>"; };
 		2BCAE12026FB45A3008110D7 /* PlayerControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerControllerView.swift; sourceTree = "<group>"; };
 		2BCAE12226FB5B3B008110D7 /* PlayerControllerViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerControllerViewViewModel.swift; sourceTree = "<group>"; };
+		2BE5D58E2708B951008807E3 /* CarPlay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CarPlay.framework; path = System/Library/Frameworks/CarPlay.framework; sourceTree = SDKROOT; };
 		C83418339C47A357161CE0C5 /* Pods-Spotify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotify.debug.xcconfig"; path = "Target Support Files/Pods-Spotify/Pods-Spotify.debug.xcconfig"; sourceTree = "<group>"; };
 		E09296E48791BEC556FDDCB2 /* Pods-Spotify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotify.release.xcconfig"; path = "Target Support Files/Pods-Spotify/Pods-Spotify.release.xcconfig"; sourceTree = "<group>"; };
 		EBB5BDBD6A746FC75BC4D6C0 /* Pods_Spotify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spotify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEE78C9790FC5F82BD0BEC87 /* Pods_Spotify.framework in Frameworks */,
+				2BE5D58F2708B951008807E3 /* CarPlay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +160,7 @@
 		0C2E4D4FC07CA61BAD852C06 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2BE5D58E2708B951008807E3 /* CarPlay.framework */,
 				EBB5BDBD6A746FC75BC4D6C0 /* Pods_Spotify.framework */,
 			);
 			name = Frameworks;
